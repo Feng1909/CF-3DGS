@@ -10,5 +10,5 @@ open3d
 timm==0.6.11
 submodules/diff-gaussian-rasterization
 submodules/simple-knn
-git+https://github.com/facebookresearch/pytorch3d.git@stable
-git+https://github.com/princeton-vl/lietorch.git
+# git+https://github.com/facebookresearch/pytorch3d.git@stable
+# git+https://github.com/princeton-vl/lietorch.git

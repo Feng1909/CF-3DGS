@@ -36,6 +36,7 @@ import json
 import gzip
 import torch
 import torch.nn.functional as F
+torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
 torch.hub.help("intel-isl/MiDaS", "DPT_BEiT_L_384", force_reload=True)
 
 
@@ -244,7 +245,7 @@ class GaussianTrainer(object):
             #         [[focal_length_x, 0, width/2], [0, focal_length_y, height/2], [0, 0, 1]])
             #     self.intrinsic = intr_mat
             # else:
-            images = sorted(glob.glob(os.path.join(source_path, "images/*.jpg")))
+            images = sorted(glob.glob(os.path.join(source_path, "images/*.png")))
             if len(images) > max_frames:
                 interval = len(images) // max_frames
                 images = images[::interval]

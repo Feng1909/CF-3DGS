@@ -125,7 +125,7 @@ def colorize(value, vmin=None, vmax=None, cmap='gray_r', invalid_val=-99, invali
     # grey out the invalid values
 
     value[invalid_mask] = np.nan
-    cmapper = mpl.cm.get_cmap(cmap)
+    cmapper = mpl.pyplot.get_cmap(cmap)
     if value_transform:
         value = value_transform(value)
         # value = value / value.max()
